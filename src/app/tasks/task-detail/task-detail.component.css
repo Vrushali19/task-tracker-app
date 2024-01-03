@@ -1,0 +1,10 @@
+.task-title {
+     background-color: #000080;
+     color: white;
+}
+.task-desc{
+    padding: 15px;
+    font-size: 20px;
+    background-color: #6495ed;
+    color: white;
+}

@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-xs-12">
+        <h2>Task List</h2>
+        <button class="btn btn-primary pull-right" routerLink="/add">Add Task</button>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-md-12">
+        <div class="list-group-item clearfix" *ngFor="let task of tasks; let i = index" [id]="i" taskListHighlight [taskStatus]="task.status">
+            <div class="pull-left">
+                <h4 class="list-group-item-heading">{{ task.title }}</h4>
+            </div>
+            <span class="pull-right">
+                <span>{{ task.status }}</span>&nbsp;
+                <a class="btn btn-primary mx-2" routerLink="/edit/{{i}}"> Edit </a> &nbsp;
+                <a class="btn btn-success mx-2" routerLink="/details/{{i}}"> Details </a>
+            </span>
+            <br>
+        </div>
+        
+    </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <span>Tasks/Task Details</span>
+            <button routerLink="/tasks" class="btn btn-primary pull-right">Back</button>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>Task Details</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12" *ngIf="task">
+            <div class="col-xs-12 task-title">
+                <h2>{{task.title}}</h2>
+            </div>
+            <div class="col-xs-12 task-desc">
+                <p>{{task.description}}</p>  
+                <h3 class="pull-right">Status: {{task.status}}</h3>
+        </div>
+    </div>
+</div>
